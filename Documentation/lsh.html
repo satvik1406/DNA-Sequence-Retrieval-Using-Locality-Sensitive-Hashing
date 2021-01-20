@@ -1,0 +1,663 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.9.1" />
+<title>src.lsh API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>src.lsh</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">import binascii
+import numpy as np
+import time
+import random
+import itertools
+import matplotlib.pyplot as plt
+
+
+def load_dataset():
+    &#34;&#34;&#34;
+    fuction to load the dataset.
+    The dataset has information regarding DNA secquence and the class of the DNA sequence.
+    (OUTPUT : all the DNA sequences as a numpy array.)
+    &#34;&#34;&#34;
+    data = []
+    with open(&#39;src/dataset/human_data.txt&#39;, &#39;r&#39;, encoding=&#34;utf-8&#34;) as f:
+            out = f.readlines()
+            for line in out:
+                line = line.strip(&#39;\n&#39;).split()
+                data.append([line[0], int(line[1])])
+    return np.array(data)
+
+
+def string_to_shingles(string, k):
+    &#34;&#34;&#34;
+    Function to convert the document into k-shingles.
+    (INPUT : string of charecters , shingle length as integer.)
+    (OUTPUT : a list of unique hashed k-shingles of the input string.)
+    &#34;&#34;&#34;
+    string = string.ljust(k)
+    shingles = {string[i:i + k] for i in range(len(string) - k + 1)}
+    shingles_hash = {binascii.crc32(bytes(shingle,&#39;utf-8&#39;)) &amp; 0xffffffff for shingle in shingles}
+    return list(shingles_hash)
+
+
+def make_shingles(data, k):
+    &#34;&#34;&#34;
+    Function to convert the DNA sequence input into k-shingles.
+    (INPUT : a tuple having DNA secquence and the class of DNA secquence , shingle length as integer.)
+    (OUTPUT : a list of lists containing unique hashed k-shingles.)
+    &#34;&#34;&#34;
+    return [string_to_shingles(row[0], k) for row in data]
+
+def generate_hash_functions(num_hashes):
+    &#34;&#34;&#34;
+    Function to genrate the hash functions.
+    (INPUT : total number of hash functions as an integer.)
+    (OUTPUT : 2 lists of random integers and a large prime number which constitute to our hash functions.)
+    &#34;&#34;&#34;
+    a = set()
+    b = set()
+    while len(a)&lt;num_hashes:
+        a.add(random.randint(0, 2**32 - 1))
+    while len(b)&lt;num_hashes:
+        b.add(random.randint(0, 2**32 - 1))
+    c = 4294967311
+    return list(a), list(b), c
+
+def minhash(shingled_data, num_hashes):
+    &#34;&#34;&#34;
+    Function for minhashing the shingled data.
+    (INPUT : shingled data , the total number of hash functions.)
+    (OUTPUT : Signatures as a list of lists.)
+    &#34;&#34;&#34;
+    a, b, c = generate_hash_functions(num_hashes)
+    signatures = []
+    for shingle_set in shingled_data:
+        signature = []
+        for i in range(num_hashes):
+            shingle_set = np.array(shingle_set)
+            signature.append(np.min((shingle_set*a[i] + b[i])%c))
+        signatures.append(signature)
+    return signatures
+
+def lsh(signatures, num_bands):
+    &#34;&#34;&#34;
+    Function for running the Locality Sensitive Hashing algorithm.
+    (INPUT : Signatures as a list of lists , an integer.)
+    (OUTPUT :a set of buckets.)
+    &#34;&#34;&#34;
+
+    split_signatures = np.array([np.array_split(row, num_bands) for row in signatures])
+    candidates = set()
+    for j in range(num_bands):
+        buckets = {}
+        for i in range(len(split_signatures)):
+            if tuple(split_signatures[i][j]) not in buckets:
+                buckets[tuple(split_signatures[i][j])] = []
+            buckets[tuple(split_signatures[i][j])].append(i)
+        for row in buckets.values():
+            candidates |= set(list(itertools.combinations(row,2)))
+        buckets.clear()
+    return candidates
+
+def hamming_similarity(signature_1, signature_2):
+    &#34;&#34;&#34;
+    Function for finding the hamming similarity betweeen two signatures.
+    (INPUT : two signature lists.)
+    (OUTPUT : hamming similarity of the inputs.)
+    &#34;&#34;&#34;
+    count = 0
+    for a,b in zip(signature_1, signature_2):
+        if a==b:
+            count+=1
+    return float(count)/float(len(signature_1))
+
+def check_candidates(signatures, candidates, threshold):
+    &#34;&#34;&#34;
+    Function to collect pairs of similar sequences.
+    (INPUT : signatures , set of buckets , the threshold value for similarity comparision.)
+    (OUTPUT : all similar pairs as list.)
+    &#34;&#34;&#34;
+    similar_pairs = []
+    for pair in candidates:
+        if pair[0] == pair[1]:
+            flag += 1
+        if hamming_similarity(signatures[pair[0]], signatures[pair[1]]) &gt; threshold:
+            similar_pairs.append(pair)
+    return similar_pairs
+
+def make_plots():
+    &#34;&#34;&#34;
+    Function to plot graphs to determine the optimal values of number of bands , shingle length(k) etc.
+    &#34;&#34;&#34;
+    # To print precision graphs and graph of number of candidate vs similar pairs
+    x = []
+    y1 = []
+    y2 = []
+    for threshold in range(50,100,5):
+        shingle_length = 10
+        num_hashes = 100
+        num_bands = 5
+        threshold = float(threshold)/100
+
+        data = load_dataset()
+        shingled_data = make_shingles(data, shingle_length)
+        signatures = minhash(shingled_data, num_hashes)
+        candidates = lsh(signatures, num_bands)
+        similar_pairs = check_candidates(signatures, candidates, threshold)
+        x.append(threshold)
+        y1.append(len(candidates))
+        y2.append(len(similar_pairs))
+
+    y = np.divide(y2,y1)
+
+    plt.figure()
+    plt.plot(x, y)
+    plt.xlabel(&#39;Threshold&#39;)
+    plt.ylabel(&#39;Precision&#39;)
+    plt.legend()
+    plt.savefig(&#34;threshold_vs_precision&#34;)
+    plt.close()
+
+    plt.figure()
+    plt.plot(x, y1, label = &#34;Candidate pairs&#34;)
+    plt.plot(x, y2, label = &#34;Similar pairs&#34;)
+    plt.xlabel(&#39;Threshold&#39;)
+    plt.ylabel(&#39;Number of pairs&#39;)
+    plt.savefig(&#34;threshold_vs_pairs&#34;)
+    plt.close()
+
+    # To print graph of Similarity vs Probability of being detected as candidate
+    plt.figure()
+    fig, ax = plt.subplots(2,3)
+    
+    ax[0,0].set(xlabel=&#39;Similarity&#39;, ylabel=&#39;Probability&#39;)
+    ax[0,0].set_title(&#39;b = [5,10...50], r = 5&#39;)
+    r=5
+    for b in range(5,55,5):
+        x = []
+        y = []
+        for s in np.arange(0.01,1,0.01):
+            prob = 1-((1-s**r)**b)
+            x.append(s)
+            y.append(prob)
+        ax[0,0].plot(x, y, c = &#39;purple&#39;, lw = 0.5)
+
+    ax[0,1].set(xlabel=&#39;Similarity&#39;, ylabel=&#39;Probability&#39;)
+    ax[0,1].set_title(&#39;b = 20, r = [5,10...50]&#39;)
+    b=50
+    for r in range(5,55,5):
+        x = []
+        y = []
+        for s in np.arange(0.01,1,0.01):
+            prob = 1-((1-s**r)**b)
+            x.append(s)
+            y.append(prob)
+        ax[0,1].plot(x, y, c = &#39;purple&#39;, lw = 0.5)
+
+    ax[0,2].set(xlabel=&#39;Similarity&#39;, ylabel=&#39;Probability&#39;)
+    ax[0,2].set_title(&#39;h = 100, b = [5,10...50], r = h/b&#39;)
+    h=100
+    for b in range(5,50,5):
+        r = h/b
+        x = []
+        y = []
+        for s in np.arange(0.01,1,0.01):
+            prob = 1-((1-s**r)**b)
+            x.append(s)
+            y.append(prob)
+        ax[0,2].plot(x, y, c = &#39;purple&#39;, lw = 0.5)
+
+    ax[1,0].set(xlabel=&#39;Similarity&#39;, ylabel=&#39;Probability&#39;)
+    ax[1,0].set_title(&#39;h = 200, b = [5,10...100], r = h/b&#39;)
+    h=200
+    for b in range(5,100,5):
+        r = h/b
+        x = []
+        y = []
+        for s in np.arange(0.01,1,0.01):
+            prob = 1-((1-s**r)**b)
+            x.append(s)
+            y.append(prob)
+        ax[1,0].plot(x, y, c = &#39;purple&#39;, lw = 0.5)
+
+    ax[1,1].set(xlabel=&#39;Similarity&#39;, ylabel=&#39;Probability&#39;)
+    ax[1,1].set_title(&#39;h = 400, b = [10,20...200], r = h/b&#39;)
+    h=400
+    for b in range(10,200,10):
+        r = h/b
+        x = []
+        y = []
+        for s in np.arange(0.01,1,0.01):
+            prob = 1-((1-s**r)**b)
+            x.append(s)
+            y.append(prob)
+        ax[1,1].plot(x, y, c = &#39;purple&#39;, lw = 0.5)
+
+    ax[1,2].set(xlabel=&#39;Similarity&#39;, ylabel=&#39;Probability&#39;)
+    ax[1,2].set_title(&#39;h = 500, b = [10,20...200], r = h/b&#39;)
+    h=500
+    for b in range(10,200,10):
+        r = h/b
+        x = []
+        y = []
+        for s in np.arange(0.01,1,0.01):
+            prob = 1-((1-s**r)**b)
+            x.append(s)
+            y.append(prob)
+        ax[1,2].plot(x, y, c = &#39;purple&#39;, lw = 0.5)
+        
+
+    plt.tight_layout()
+    plt.show()
+    plt.close()
+
+# make_plots()</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="src.lsh.check_candidates"><code class="name flex">
+<span>def <span class="ident">check_candidates</span></span>(<span>signatures, candidates, threshold)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Function to collect pairs of similar sequences.
+(INPUT : signatures , set of buckets , the threshold value for similarity comparision.)
+(OUTPUT : all similar pairs as list.)</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def check_candidates(signatures, candidates, threshold):
+    &#34;&#34;&#34;
+    Function to collect pairs of similar sequences.
+    (INPUT : signatures , set of buckets , the threshold value for similarity comparision.)
+    (OUTPUT : all similar pairs as list.)
+    &#34;&#34;&#34;
+    similar_pairs = []
+    for pair in candidates:
+        if pair[0] == pair[1]:
+            flag += 1
+        if hamming_similarity(signatures[pair[0]], signatures[pair[1]]) &gt; threshold:
+            similar_pairs.append(pair)
+    return similar_pairs</code></pre>
+</details>
+</dd>
+<dt id="src.lsh.generate_hash_functions"><code class="name flex">
+<span>def <span class="ident">generate_hash_functions</span></span>(<span>num_hashes)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Function to genrate the hash functions.
+(INPUT : total number of hash functions as an integer.)
+(OUTPUT : 2 lists of random integers and a large prime number which constitute to our hash functions.)</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def generate_hash_functions(num_hashes):
+    &#34;&#34;&#34;
+    Function to genrate the hash functions.
+    (INPUT : total number of hash functions as an integer.)
+    (OUTPUT : 2 lists of random integers and a large prime number which constitute to our hash functions.)
+    &#34;&#34;&#34;
+    a = set()
+    b = set()
+    while len(a)&lt;num_hashes:
+        a.add(random.randint(0, 2**32 - 1))
+    while len(b)&lt;num_hashes:
+        b.add(random.randint(0, 2**32 - 1))
+    c = 4294967311
+    return list(a), list(b), c</code></pre>
+</details>
+</dd>
+<dt id="src.lsh.hamming_similarity"><code class="name flex">
+<span>def <span class="ident">hamming_similarity</span></span>(<span>signature_1, signature_2)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Function for finding the hamming similarity betweeen two signatures.
+(INPUT : two signature lists.)
+(OUTPUT : hamming similarity of the inputs.)</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def hamming_similarity(signature_1, signature_2):
+    &#34;&#34;&#34;
+    Function for finding the hamming similarity betweeen two signatures.
+    (INPUT : two signature lists.)
+    (OUTPUT : hamming similarity of the inputs.)
+    &#34;&#34;&#34;
+    count = 0
+    for a,b in zip(signature_1, signature_2):
+        if a==b:
+            count+=1
+    return float(count)/float(len(signature_1))</code></pre>
+</details>
+</dd>
+<dt id="src.lsh.load_dataset"><code class="name flex">
+<span>def <span class="ident">load_dataset</span></span>(<span>)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>fuction to load the dataset.
+The dataset has information regarding DNA secquence and the class of the DNA sequence.
+(OUTPUT : all the DNA sequences as a numpy array.)</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def load_dataset():
+    &#34;&#34;&#34;
+    fuction to load the dataset.
+    The dataset has information regarding DNA secquence and the class of the DNA sequence.
+    (OUTPUT : all the DNA sequences as a numpy array.)
+    &#34;&#34;&#34;
+    data = []
+    with open(&#39;src/dataset/human_data.txt&#39;, &#39;r&#39;, encoding=&#34;utf-8&#34;) as f:
+            out = f.readlines()
+            for line in out:
+                line = line.strip(&#39;\n&#39;).split()
+                data.append([line[0], int(line[1])])
+    return np.array(data)</code></pre>
+</details>
+</dd>
+<dt id="src.lsh.lsh"><code class="name flex">
+<span>def <span class="ident">lsh</span></span>(<span>signatures, num_bands)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Function for running the Locality Sensitive Hashing algorithm.
+(INPUT : Signatures as a list of lists , an integer.)
+(OUTPUT :a set of buckets.)</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def lsh(signatures, num_bands):
+    &#34;&#34;&#34;
+    Function for running the Locality Sensitive Hashing algorithm.
+    (INPUT : Signatures as a list of lists , an integer.)
+    (OUTPUT :a set of buckets.)
+    &#34;&#34;&#34;
+
+    split_signatures = np.array([np.array_split(row, num_bands) for row in signatures])
+    candidates = set()
+    for j in range(num_bands):
+        buckets = {}
+        for i in range(len(split_signatures)):
+            if tuple(split_signatures[i][j]) not in buckets:
+                buckets[tuple(split_signatures[i][j])] = []
+            buckets[tuple(split_signatures[i][j])].append(i)
+        for row in buckets.values():
+            candidates |= set(list(itertools.combinations(row,2)))
+        buckets.clear()
+    return candidates</code></pre>
+</details>
+</dd>
+<dt id="src.lsh.make_plots"><code class="name flex">
+<span>def <span class="ident">make_plots</span></span>(<span>)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Function to plot graphs to determine the optimal values of number of bands , shingle length(k) etc.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def make_plots():
+    &#34;&#34;&#34;
+    Function to plot graphs to determine the optimal values of number of bands , shingle length(k) etc.
+    &#34;&#34;&#34;
+    # To print precision graphs and graph of number of candidate vs similar pairs
+    x = []
+    y1 = []
+    y2 = []
+    for threshold in range(50,100,5):
+        shingle_length = 10
+        num_hashes = 100
+        num_bands = 5
+        threshold = float(threshold)/100
+
+        data = load_dataset()
+        shingled_data = make_shingles(data, shingle_length)
+        signatures = minhash(shingled_data, num_hashes)
+        candidates = lsh(signatures, num_bands)
+        similar_pairs = check_candidates(signatures, candidates, threshold)
+        x.append(threshold)
+        y1.append(len(candidates))
+        y2.append(len(similar_pairs))
+
+    y = np.divide(y2,y1)
+
+    plt.figure()
+    plt.plot(x, y)
+    plt.xlabel(&#39;Threshold&#39;)
+    plt.ylabel(&#39;Precision&#39;)
+    plt.legend()
+    plt.savefig(&#34;threshold_vs_precision&#34;)
+    plt.close()
+
+    plt.figure()
+    plt.plot(x, y1, label = &#34;Candidate pairs&#34;)
+    plt.plot(x, y2, label = &#34;Similar pairs&#34;)
+    plt.xlabel(&#39;Threshold&#39;)
+    plt.ylabel(&#39;Number of pairs&#39;)
+    plt.savefig(&#34;threshold_vs_pairs&#34;)
+    plt.close()
+
+    # To print graph of Similarity vs Probability of being detected as candidate
+    plt.figure()
+    fig, ax = plt.subplots(2,3)
+    
+    ax[0,0].set(xlabel=&#39;Similarity&#39;, ylabel=&#39;Probability&#39;)
+    ax[0,0].set_title(&#39;b = [5,10...50], r = 5&#39;)
+    r=5
+    for b in range(5,55,5):
+        x = []
+        y = []
+        for s in np.arange(0.01,1,0.01):
+            prob = 1-((1-s**r)**b)
+            x.append(s)
+            y.append(prob)
+        ax[0,0].plot(x, y, c = &#39;purple&#39;, lw = 0.5)
+
+    ax[0,1].set(xlabel=&#39;Similarity&#39;, ylabel=&#39;Probability&#39;)
+    ax[0,1].set_title(&#39;b = 20, r = [5,10...50]&#39;)
+    b=50
+    for r in range(5,55,5):
+        x = []
+        y = []
+        for s in np.arange(0.01,1,0.01):
+            prob = 1-((1-s**r)**b)
+            x.append(s)
+            y.append(prob)
+        ax[0,1].plot(x, y, c = &#39;purple&#39;, lw = 0.5)
+
+    ax[0,2].set(xlabel=&#39;Similarity&#39;, ylabel=&#39;Probability&#39;)
+    ax[0,2].set_title(&#39;h = 100, b = [5,10...50], r = h/b&#39;)
+    h=100
+    for b in range(5,50,5):
+        r = h/b
+        x = []
+        y = []
+        for s in np.arange(0.01,1,0.01):
+            prob = 1-((1-s**r)**b)
+            x.append(s)
+            y.append(prob)
+        ax[0,2].plot(x, y, c = &#39;purple&#39;, lw = 0.5)
+
+    ax[1,0].set(xlabel=&#39;Similarity&#39;, ylabel=&#39;Probability&#39;)
+    ax[1,0].set_title(&#39;h = 200, b = [5,10...100], r = h/b&#39;)
+    h=200
+    for b in range(5,100,5):
+        r = h/b
+        x = []
+        y = []
+        for s in np.arange(0.01,1,0.01):
+            prob = 1-((1-s**r)**b)
+            x.append(s)
+            y.append(prob)
+        ax[1,0].plot(x, y, c = &#39;purple&#39;, lw = 0.5)
+
+    ax[1,1].set(xlabel=&#39;Similarity&#39;, ylabel=&#39;Probability&#39;)
+    ax[1,1].set_title(&#39;h = 400, b = [10,20...200], r = h/b&#39;)
+    h=400
+    for b in range(10,200,10):
+        r = h/b
+        x = []
+        y = []
+        for s in np.arange(0.01,1,0.01):
+            prob = 1-((1-s**r)**b)
+            x.append(s)
+            y.append(prob)
+        ax[1,1].plot(x, y, c = &#39;purple&#39;, lw = 0.5)
+
+    ax[1,2].set(xlabel=&#39;Similarity&#39;, ylabel=&#39;Probability&#39;)
+    ax[1,2].set_title(&#39;h = 500, b = [10,20...200], r = h/b&#39;)
+    h=500
+    for b in range(10,200,10):
+        r = h/b
+        x = []
+        y = []
+        for s in np.arange(0.01,1,0.01):
+            prob = 1-((1-s**r)**b)
+            x.append(s)
+            y.append(prob)
+        ax[1,2].plot(x, y, c = &#39;purple&#39;, lw = 0.5)
+        
+
+    plt.tight_layout()
+    plt.show()
+    plt.close()</code></pre>
+</details>
+</dd>
+<dt id="src.lsh.make_shingles"><code class="name flex">
+<span>def <span class="ident">make_shingles</span></span>(<span>data, k)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Function to convert the DNA sequence input into k-shingles.
+(INPUT : a tuple having DNA secquence and the class of DNA secquence , shingle length as integer.)
+(OUTPUT : a list of lists containing unique hashed k-shingles.)</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def make_shingles(data, k):
+    &#34;&#34;&#34;
+    Function to convert the DNA sequence input into k-shingles.
+    (INPUT : a tuple having DNA secquence and the class of DNA secquence , shingle length as integer.)
+    (OUTPUT : a list of lists containing unique hashed k-shingles.)
+    &#34;&#34;&#34;
+    return [string_to_shingles(row[0], k) for row in data]</code></pre>
+</details>
+</dd>
+<dt id="src.lsh.minhash"><code class="name flex">
+<span>def <span class="ident">minhash</span></span>(<span>shingled_data, num_hashes)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Function for minhashing the shingled data.
+(INPUT : shingled data , the total number of hash functions.)
+(OUTPUT : Signatures as a list of lists.)</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def minhash(shingled_data, num_hashes):
+    &#34;&#34;&#34;
+    Function for minhashing the shingled data.
+    (INPUT : shingled data , the total number of hash functions.)
+    (OUTPUT : Signatures as a list of lists.)
+    &#34;&#34;&#34;
+    a, b, c = generate_hash_functions(num_hashes)
+    signatures = []
+    for shingle_set in shingled_data:
+        signature = []
+        for i in range(num_hashes):
+            shingle_set = np.array(shingle_set)
+            signature.append(np.min((shingle_set*a[i] + b[i])%c))
+        signatures.append(signature)
+    return signatures</code></pre>
+</details>
+</dd>
+<dt id="src.lsh.string_to_shingles"><code class="name flex">
+<span>def <span class="ident">string_to_shingles</span></span>(<span>string, k)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Function to convert the document into k-shingles.
+(INPUT : string of charecters , shingle length as integer.)
+(OUTPUT : a list of unique hashed k-shingles of the input string.)</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def string_to_shingles(string, k):
+    &#34;&#34;&#34;
+    Function to convert the document into k-shingles.
+    (INPUT : string of charecters , shingle length as integer.)
+    (OUTPUT : a list of unique hashed k-shingles of the input string.)
+    &#34;&#34;&#34;
+    string = string.ljust(k)
+    shingles = {string[i:i + k] for i in range(len(string) - k + 1)}
+    shingles_hash = {binascii.crc32(bytes(shingle,&#39;utf-8&#39;)) &amp; 0xffffffff for shingle in shingles}
+    return list(shingles_hash)</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="src" href="index.html">src</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="src.lsh.check_candidates" href="#src.lsh.check_candidates">check_candidates</a></code></li>
+<li><code><a title="src.lsh.generate_hash_functions" href="#src.lsh.generate_hash_functions">generate_hash_functions</a></code></li>
+<li><code><a title="src.lsh.hamming_similarity" href="#src.lsh.hamming_similarity">hamming_similarity</a></code></li>
+<li><code><a title="src.lsh.load_dataset" href="#src.lsh.load_dataset">load_dataset</a></code></li>
+<li><code><a title="src.lsh.lsh" href="#src.lsh.lsh">lsh</a></code></li>
+<li><code><a title="src.lsh.make_plots" href="#src.lsh.make_plots">make_plots</a></code></li>
+<li><code><a title="src.lsh.make_shingles" href="#src.lsh.make_shingles">make_shingles</a></code></li>
+<li><code><a title="src.lsh.minhash" href="#src.lsh.minhash">minhash</a></code></li>
+<li><code><a title="src.lsh.string_to_shingles" href="#src.lsh.string_to_shingles">string_to_shingles</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.9.1</a>.</p>
+</footer>
+</body>
+</html>
